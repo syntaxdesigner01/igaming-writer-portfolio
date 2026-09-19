@@ -24,7 +24,7 @@ export default function ContactCta({
 
   return (
     <>
-      <div className="cta-card">
+      <div className="cta-card" id="contact">
         <div className="cta-copy">
           <p className="eyebrow">{eyebrow}</p>
           <h2>{heading}</h2>

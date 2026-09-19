@@ -24,7 +24,7 @@ export default function Header() {
         <Link className={isBlog ? "active" : undefined} href="/blog">
           Blog
         </Link>
-        <a className="nav-cta" href="mailto:hello@example.com">
+        <a className="nav-cta" href="#contact" onClick={() => setOpen(false)}>
           Work with me
         </a>
       </nav>
