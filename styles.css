@@ -29,3 +29,4 @@
 .modal-success{padding:20px 0}
 .modal-success h3{margin:8px 0 0}
 @media (max-width:640px){.modal-card{padding:26px}}
+.article-body .table-scroll{overflow-x:auto;margin:32px 0}.article-body table{width:100%;border-collapse:collapse;font-size:15px}.article-body th,.article-body td{padding:12px 16px;border:1px solid var(--line);text-align:left;white-space:nowrap}.article-body th{background:var(--panel-2);color:var(--text);font-weight:600}.article-body td{color:#d8d9dc}.article-body tbody tr:nth-child(even) td{background:rgba(255,255,255,.03)}
