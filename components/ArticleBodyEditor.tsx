@@ -30,6 +30,10 @@ const ArticleBodyEditor = forwardRef<ArticleBodyEditorHandle, Props>(
   function ArticleBodyEditor({ content, onChange }, ref) {
     const lastEmitted = useRef(content);
     const [, forceRender] = useState(0);
+    const [tableMenuOpen, setTableMenuOpen] = useState(false);
+    const [tableRows, setTableRows] = useState(3);
+    const [tableCols, setTableCols] = useState(3);
+    const tableMenuRef = useRef<HTMLDivElement>(null);
 
     const editor = useEditor({
       immediatelyRender: false,
@@ -77,7 +81,32 @@ const ArticleBodyEditor = forwardRef<ArticleBodyEditorHandle, Props>(
       }
     }, [content, editor]);
 
+    useEffect(() => {
+      if (!tableMenuOpen) return;
+      const onKeyDown = (e: KeyboardEvent) => {
+        if (e.key === "Escape") setTableMenuOpen(false);
+      };
+      const onClickOutside = (e: MouseEvent) => {
+        if (!tableMenuRef.current?.contains(e.target as Node)) {
+          setTableMenuOpen(false);
+        }
+      };
+      document.addEventListener("keydown", onKeyDown);
+      document.addEventListener("mousedown", onClickOutside);
+      return () => {
+        document.removeEventListener("keydown", onKeyDown);
+        document.removeEventListener("mousedown", onClickOutside);
+      };
+    }, [tableMenuOpen]);
+
     if (!editor) return null;
+
+    const insertTable = () => {
+      const rows = Math.min(20, Math.max(1, tableRows));
+      const cols = Math.min(10, Math.max(1, tableCols));
+      editor.chain().focus().insertTable({ rows, cols, withHeaderRow: true }).run();
+      setTableMenuOpen(false);
+    };
 
     const setLink = () => {
       const previous = editor.getAttributes("link").href as string | undefined;
@@ -119,12 +148,47 @@ const ArticleBodyEditor = forwardRef<ArticleBodyEditorHandle, Props>(
           {btn("❝", editor.isActive("blockquote"), () => editor.chain().focus().toggleBlockquote().run(), "Blockquote")}
           {btn("</>", editor.isActive("codeBlock"), () => editor.chain().focus().toggleCodeBlock().run(), "Code block")}
           {btn("🔗", editor.isActive("link"), setLink, "Link")}
-          {btn(
-            "Table",
-            editor.isActive("table"),
-            () => editor.chain().focus().insertTable({ rows: 3, cols: 3, withHeaderRow: true }).run(),
-            "Insert table"
-          )}
+          <div className="table-insert" ref={tableMenuRef}>
+            <button
+              type="button"
+              title="Insert table"
+              className={`ghost-btn small editor-toolbar-btn${editor.isActive("table") || tableMenuOpen ? " active" : ""}`}
+              onClick={() => setTableMenuOpen((open) => !open)}
+            >
+              Table
+            </button>
+            {tableMenuOpen && (
+              <div className="table-insert-menu">
+                <label>
+                  Rows
+                  <input
+                    type="number"
+                    min={1}
+                    max={20}
+                    value={tableRows}
+                    onChange={(e) => setTableRows(Number(e.target.value) || 1)}
+                  />
+                </label>
+                <label>
+                  Columns
+                  <input
+                    type="number"
+                    min={1}
+                    max={10}
+                    value={tableCols}
+                    onChange={(e) => setTableCols(Number(e.target.value) || 1)}
+                  />
+                </label>
+                <button
+                  type="button"
+                  className="button button-primary small"
+                  onClick={insertTable}
+                >
+                  Insert
+                </button>
+              </div>
+            )}
+          </div>
         </div>
         <EditorContent editor={editor} />
       </div>
