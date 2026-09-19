@@ -4,6 +4,9 @@ import { useEffect, useRef, useState } from "react";
 import type { Article } from "@/lib/types";
 import { markdownToHtml, escapeHtml } from "@/lib/markdown";
 import { adminApi } from "@/lib/adminApi";
+import ArticleBodyEditor, {
+  type ArticleBodyEditorHandle,
+} from "@/components/ArticleBodyEditor";
 
 function slugify(v: string): string {
   return String(v || "")
@@ -52,6 +55,7 @@ export default function AdminApp() {
 
   const coverFileRef = useRef<HTMLInputElement>(null);
   const mdFileRef = useRef<HTMLInputElement>(null);
+  const bodyEditorRef = useRef<ArticleBodyEditorHandle>(null);
 
   function clearCoverFile() {
     if (coverPreview) URL.revokeObjectURL(coverPreview);
@@ -258,15 +262,12 @@ export default function AdminApp() {
     if (!file) return;
     const text = await file.text();
     setForm((f) => {
-      let next = { ...f, content: text };
-      if (!f.title.trim()) {
-        const heading = text.match(/^#\s+(.+)$/m);
-        if (heading) {
-          next = { ...next, title: heading[1], slug: slugify(heading[1]) };
-        }
-      }
-      return next;
+      if (f.title.trim()) return f;
+      const heading = text.match(/^#\s+(.+)$/m);
+      if (!heading) return f;
+      return { ...f, title: heading[1], slug: slugify(heading[1]) };
     });
+    bodyEditorRef.current?.setMarkdown(text);
     if (mdFileRef.current) mdFileRef.current.value = "";
   }
 
@@ -621,14 +622,11 @@ export default function AdminApp() {
                         onChange={importMarkdown}
                       />
                     </div>
-                    <textarea
-                      className="content-editor"
-                      placeholder={
-                        "# Article title\n\nStart writing here…\n\n## Heading\n\nWrite your paragraphs in Markdown.\n\n- Bullet point\n- Another point"
-                      }
-                      value={form.content}
-                      onChange={(e) =>
-                        setForm((f) => ({ ...f, content: e.target.value }))
+                    <ArticleBodyEditor
+                      ref={bodyEditorRef}
+                      content={form.content}
+                      onChange={(md) =>
+                        setForm((f) => ({ ...f, content: md }))
                       }
                     />
                     <div className="form-foot">
