@@ -14,7 +14,7 @@ export default function Header() {
   return (
     <header className="site-header">
       <Link className="brand" href="/">
-        <span>D1</span>
+        <span>Michael</span>
         <b>.</b>
       </Link>
       <nav className={`desktop-nav${open ? " open" : ""}`} aria-label="Primary navigation">

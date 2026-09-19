@@ -7,7 +7,7 @@ import ContactCta from "@/components/ContactCta";
 export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
-  title: "D1. | Professional iGaming Writer",
+  title: "Michael Aneke. | Professional iGaming Writer",
   description:
     "Professional iGaming writer portfolio covering casino, sportsbook, SEO, fintech and affiliate content.",
 };
@@ -32,7 +32,7 @@ export default async function HomePage() {
     <>
       <section className="hero container">
         <div className="hero-copy reveal">
-          <p className="eyebrow">iGaming writer · SEO · content strategy</p>
+          <p className="eyebrow">iGaming writer · SEO · Content Strategist</p>
           <h1>
             I write stories that help <span>iGaming brands grow.</span>
           </h1>

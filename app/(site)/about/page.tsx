@@ -3,7 +3,7 @@ import Link from "next/link";
 import ContactCta from "@/components/ContactCta";
 
 export const metadata: Metadata = {
-  title: "About | D1. iGaming Writer",
+  title: "About | Michael. iGaming Writer",
   description:
     "About D1, a professional iGaming writer specializing in casino, sportsbook, SEO and affiliate content.",
 };

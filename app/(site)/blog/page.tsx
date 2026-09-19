@@ -7,7 +7,7 @@ import ContactCta from "@/components/ContactCta";
 export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
-  title: "Blog | D1. iGaming Writer",
+  title: "Blog | Michael. iGaming Writer",
   description:
     "Selected iGaming writing by D1: casino, sportsbook, affiliate and SEO articles.",
 };

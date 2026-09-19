@@ -1,4 +1,4 @@
-# D1. iGaming Writer Portfolio + Publishing Dashboard
+# Michael. iGaming Writer Portfolio + Publishing Dashboard
 
 A Next.js (App Router, TypeScript) rebuild of the original static portfolio. Same design, same public pages and the same admin publishing workflow — now backed by Supabase (Postgres) and Cloudinary for cover images, with the admin's server logic implemented as Next.js Route Handlers.
 

@@ -277,7 +277,7 @@ export default function AdminApp() {
       <div className="auth-shell">
         <div className="auth-card">
           <div className="brand brand-admin">
-            <span>D1</span>
+            <span>Michael</span>
             <b>.</b>
           </div>
           <p className="eyebrow">Private dashboard</p>
@@ -326,7 +326,7 @@ export default function AdminApp() {
       <header className="dash-header">
         <div className="dash-header-inner">
           <a className="brand" href="/">
-            <span>D1</span>
+            <span>Michael</span>
             <b>.</b>
           </a>
           <div className="dash-title">

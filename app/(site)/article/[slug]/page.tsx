@@ -27,10 +27,10 @@ export async function generateMetadata({
   const { slug } = await params;
   const article = await getArticle(slug);
   if (!article) {
-    return { title: "Article | D1. iGaming Writer" };
+    return { title: "Article | Michael. iGaming Writer" };
   }
   return {
-    title: `${article.title} | D1. iGaming Writer`,
+    title: `${article.title} | Michael. iGaming Writer`,
     description: article.excerpt || undefined,
   };
 }

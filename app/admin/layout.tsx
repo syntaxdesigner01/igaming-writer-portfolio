@@ -1,7 +1,7 @@
 import "../../admin.css";
 
 export const metadata = {
-  title: "D1. Content Dashboard",
+  title: "Michael. Content Dashboard",
 };
 
 export default function AdminLayout({

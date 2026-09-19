@@ -11,7 +11,7 @@ export default function Footer() {
     <footer className="footer container">
       <div className="footer-brand">
         <Link className="brand" href="/">
-          <span>D1</span>
+          <span>Michael</span>
           <b>.</b>
         </Link>
         <p>Professional iGaming writer.</p>
@@ -22,7 +22,7 @@ export default function Footer() {
         <a href="mailto:hello@example.com">Contact</a>
         {backToTop && <a href="#top">Back to top ↑</a>}
       </div>
-      <small>© 2026 D1. All rights reserved.</small>
+      <small>© 2026 Michael. All rights reserved.</small>
     </footer>
   );
 }
