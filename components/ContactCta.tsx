@@ -17,7 +17,7 @@ export default function ContactCta({
       Let’s make the next piece <span>worth publishing.</span>
     </>
   ),
-  body = "Tell me what you need, the market, the format and the deadline. We can take it from there.",
+  body = "Let me know what you need, the market, the format, and the deadline. I will take it from there.",
   buttonText = "Let’s talk",
 }: ContactCtaProps) {
   const [open, setOpen] = useState(false);

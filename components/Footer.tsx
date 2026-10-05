@@ -14,10 +14,11 @@ export default function Footer() {
           <span>Michael</span>
           <b>.</b>
         </Link>
-        <p>Professional iGaming writer.</p>
+        <p>iGaming · Product · Finance · SEO · UGC</p>
       </div>
       <div className="footer-links">
         <Link href="/about">About</Link>
+        <Link href="/portfolio">Portfolio</Link>
         <Link href="/blog">Blog</Link>
         <a href="mailto:hello@example.com">Contact</a>
         {backToTop && <a href="#top">Back to top ↑</a>}

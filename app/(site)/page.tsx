@@ -32,17 +32,21 @@ export default async function HomePage() {
     <>
       <section className="hero container">
         <div className="hero-copy reveal">
-          <p className="eyebrow">iGaming writer · SEO · Content Strategist</p>
+          <p className="eyebrow">iGaming · Product · Finance</p>
           <h1>
             I write stories that help <span>iGaming brands grow.</span>
           </h1>
           <p className="hero-sub">
-            Casino, sportsbook and affiliate content written for people first,
-            search engines second.
+            I write about iGaming, Products, and Finance. Most of my work
+            involves taking a topic, figuring out what actually matters, and
+            turning it into something people can read without getting lost
+            along the way. I&apos;ve written everything from casino and
+            sportsbook content to product, fintech, crypto, and technology
+            pieces, using SEO best practices.
           </p>
           <div className="hero-actions">
             <Link className="button button-primary" href="/blog">
-              Read my work
+              View my work
             </Link>
             <Link className="button button-ghost" href="/about">
               About me
@@ -53,7 +57,7 @@ export default async function HomePage() {
               <i></i> 4+ years in iGaming content
             </span>
             <span>
-              <i></i> Remote · Nigeria
+              <i></i> Remote
             </span>
           </div>
         </div>
@@ -93,36 +97,57 @@ export default async function HomePage() {
 
       <section className="proof container">
         <div className="section-heading reveal">
-          <p className="eyebrow">See what I write</p>
+          <p className="eyebrow">How I work</p>
           <h2>
-            Content built to <span>do a job.</span>
+            More than just <span>writing.</span>
           </h2>
+          <p className="muted">
+            Good content starts before the first sentence. I work across
+            research, content planning, SEO, writing, editing and CMS
+            publishing, so I can take a piece from a rough brief to
+            something ready to publish.
+          </p>
         </div>
         <div className="feature-grid">
           <article className="feature-card reveal">
             <div className="icon">✦</div>
             <div>
-              <h3>Casino content</h3>
-              <p>Reviews, bonuses, payment methods, games and player guides.</p>
+              <h3>iGaming</h3>
+              <p>
+                Casino, sportsbook, betting, affiliate and gaming content
+                that makes complex topics easier for readers to understand.
+              </p>
             </div>
           </article>
           <article className="feature-card reveal delay-1">
             <div className="icon">↗</div>
             <div>
-              <h3>Sportsbook content</h3>
+              <h3>Product</h3>
               <p>
-                Betting guides, markets, previews and explainers that keep
-                readers moving.
+                Product explainers, product stories, technology content,
+                and research-driven pieces that help readers understand
+                what a product does and why it matters.
               </p>
             </div>
           </article>
           <article className="feature-card reveal delay-2">
+            <div className="icon">◆</div>
+            <div>
+              <h3>Finance</h3>
+              <p>
+                Fintech, digital finance, crypto, Web3 and financial topics
+                explained in a clear and accessible way.
+              </p>
+            </div>
+          </article>
+          <article className="feature-card reveal delay-3">
             <div className="icon">⌕</div>
             <div>
-              <h3>SEO & affiliate</h3>
+              <h3>SEO Content</h3>
               <p>
-                Search-friendly copy with internal linking, metadata and
-                conversion intent.
+                Search-focused content built around intent, structure,
+                internal linking, metadata and the questions people are
+                actually searching for.
               </p>
             </div>
           </article>
@@ -133,11 +158,11 @@ export default async function HomePage() {
         <div className="works-copy reveal">
           <p className="eyebrow">Selected work</p>
           <h2>
-            Recent pieces worth <span>reading.</span>
+            A few things I&apos;ve <span>worked on.</span>
           </h2>
           <p className="muted">
-            A snapshot of the kind of work available across casino,
-            sportsbook, affiliate and fintech-focused publishing.
+            A selection of my work across iGaming, product, finance, and
+            technology.
           </p>
           <div className="work-list">
             {featured.map((a, i) => (
@@ -199,24 +224,6 @@ export default async function HomePage() {
             </g>
           </svg>
         </div>
-      </section>
-
-      <section className="about-strip container reveal">
-        <div>
-          <p className="eyebrow">A little about me</p>
-          <h2>
-            Good iGaming content should feel <span>human.</span>
-          </h2>
-        </div>
-        <p className="muted">
-          I work across editorial writing, affiliate content, SEO and
-          content management, combining research with a natural voice that
-          helps readers understand what they are looking at and what to do
-          next.
-        </p>
-        <Link className="text-link" href="/about">
-          More about me ↗
-        </Link>
       </section>
 
       <section className="contact-cta container reveal">

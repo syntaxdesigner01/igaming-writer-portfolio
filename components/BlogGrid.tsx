@@ -7,10 +7,11 @@ import { formatDate } from "@/lib/markdown";
 
 const FILTERS = [
   { key: "all", label: "All" },
-  { key: "casino", label: "Casino" },
-  { key: "sportsbook", label: "Sportsbook" },
+  { key: "igaming", label: "iGaming" },
+  { key: "product", label: "Product" },
+  { key: "finance", label: "Finance" },
   { key: "seo", label: "SEO" },
-  { key: "fintech", label: "Fintech" },
+  { key: "technology", label: "Technology" },
 ];
 
 export default function BlogGrid({ articles }: { articles: PublicArticle[] }) {

@@ -18,9 +18,13 @@ export default function AboutPage() {
             Words are the product. <span>Clarity is the edge.</span>
           </h1>
           <p>
-            I&apos;m an iGaming writer and content manager focused on
-            casino, sportsbook, affiliate and SEO content that sounds human
-            and supports a business goal.
+            I&apos;m a writer and content strategist working across iGaming,
+            product, finance, and the tech ecosystem. For the past 4+ years,
+            I&apos;ve worked on content that sits somewhere between research,
+            storytelling and business goals, from casino and sportsbook
+            content to fintech, product and technology pieces. I care about
+            making complicated subjects easier to understand without
+            watering them down.
           </p>
         </div>
         <div className="mini-art reveal delay-1">
@@ -38,16 +42,18 @@ export default function AboutPage() {
         </div>
         <div className="reveal delay-1">
           <p className="large-copy">
-            My work spans the full content process: research, outlining,
-            writing, on-page SEO, editing, proofreading, CMS integration
-            and quality assurance.
+            My work goes beyond putting words on a page. I can take a
+            project from research and outlining through writing, SEO,
+            editing, proofreading, CMS integration and final quality
+            checks.
           </p>
           <p className="muted">
-            I’m comfortable writing for international audiences while
-            keeping the language clear, useful and commercially aware. The
-            goal is never to stuff a page with words. The goal is to give
-            readers a reason to stay, trust the information and take the
-            next step.
+            I&apos;m comfortable working with international audiences,
+            different industries and different content goals. Sometimes the
+            goal is to rank. Sometimes it is to explain a product. Sometimes
+            it is to help a reader make sense of a complicated subject.
+            Whatever the brief is, I start by understanding what the
+            content needs to do.
           </p>
         </div>
       </section>

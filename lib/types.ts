@@ -49,3 +49,46 @@ export function toPublicArticle(a: Article): PublicArticle {
     tags: Array.isArray(a.tags) ? a.tags : [],
   };
 }
+
+export type PortfolioItem = {
+  id: string;
+  title: string;
+  category: string;
+  subtype: string;
+  description: string;
+  thumbnail: string;
+  url: string;
+  platform: string;
+  published: boolean;
+  sortOrder: number;
+  date: string;
+  createdAt: string;
+  updatedAt: string;
+};
+
+export type PublicPortfolioItem = Pick<
+  PortfolioItem,
+  | "id"
+  | "title"
+  | "category"
+  | "subtype"
+  | "description"
+  | "thumbnail"
+  | "url"
+  | "platform"
+  | "date"
+>;
+
+export function toPublicPortfolioItem(p: PortfolioItem): PublicPortfolioItem {
+  return {
+    id: p.id,
+    title: p.title,
+    category: p.category || "igaming",
+    subtype: p.subtype || "",
+    description: p.description || "",
+    thumbnail: p.thumbnail || "",
+    url: p.url || "",
+    platform: p.platform || "",
+    date: p.date || "",
+  };
+}

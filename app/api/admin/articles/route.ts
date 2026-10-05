@@ -38,7 +38,7 @@ export async function POST(req: NextRequest) {
     const data = {
       slug,
       title: String(body.title || "Untitled article").trim(),
-      category: String(body.category || "casino").trim().toLowerCase(),
+      category: String(body.category || "igaming").trim().toLowerCase(),
       label: String(body.label || body.category || "IGAMING")
         .trim()
         .toUpperCase(),

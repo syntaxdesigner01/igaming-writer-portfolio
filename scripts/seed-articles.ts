@@ -30,7 +30,7 @@ const sampleArticles = [
   {
     slug: "vegas-x-sign-up-bonus-bitbetwin",
     title: "Vegas X Sign Up Bonus on BitBetWin: What You Need to Know Before You Claim",
-    category: "casino",
+    category: "igaming",
     label: "CASINO · BONUSES",
     excerpt:
       "A breakdown of the Vegas X sign-up bonus on BitBetWin — the welcome and VIP bonus types, how to claim and verify your account, wagering and eligibility rules, and why claims sometimes fail.",
@@ -48,7 +48,7 @@ const sampleArticles = [
   {
     slug: "lonestar-casino-promo-codes",
     title: "LoneStar Casino Promo Codes: How to Claim Your Welcome Bonus",
-    category: "casino",
+    category: "igaming",
     label: "CASINO · PROMOTIONS",
     excerpt:
       "A breakdown of LoneStar Casino's no-code welcome bonus, daily and referral promotions, and its VIP loyalty program — plus what you need to know before you claim.",

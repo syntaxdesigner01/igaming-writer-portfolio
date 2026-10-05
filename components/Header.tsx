@@ -9,6 +9,7 @@ export default function Header() {
   const [open, setOpen] = useState(false);
 
   const isAbout = pathname === "/about";
+  const isPortfolio = pathname === "/portfolio";
   const isBlog = pathname === "/blog" || pathname.startsWith("/article/");
 
   return (
@@ -20,6 +21,9 @@ export default function Header() {
       <nav className={`desktop-nav${open ? " open" : ""}`} aria-label="Primary navigation">
         <Link className={isAbout ? "active" : undefined} href="/about">
           About
+        </Link>
+        <Link className={isPortfolio ? "active" : undefined} href="/portfolio">
+          Portfolio
         </Link>
         <Link className={isBlog ? "active" : undefined} href="/blog">
           Blog

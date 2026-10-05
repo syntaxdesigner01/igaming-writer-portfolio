@@ -32,8 +32,10 @@ export default async function BlogPage() {
             Useful words about <span>iGaming.</span>
           </h1>
           <p>
-            Selected pieces across casino, sportsbook, SEO, affiliate
-            content and the wider digital publishing space.
+            Ideas, analysis and useful reads across iGaming, product,
+            finance, and technology. A mix of things I&apos;m researching,
+            things I&apos;m learning and subjects I think are worth
+            explaining.
           </p>
         </div>
         <div className="mini-art reveal delay-1">
