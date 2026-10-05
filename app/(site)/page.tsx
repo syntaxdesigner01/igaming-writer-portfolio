@@ -32,9 +32,9 @@ export default async function HomePage() {
     <>
       <section className="hero container">
         <div className="hero-copy reveal">
-          <p className="eyebrow">iGaming · Product · Finance</p>
+          <p className="eyebrow">iGaming Writer · Product · Finance · SEO Content Strategist</p>
           <h1>
-            I write stories that help <span>iGaming brands grow.</span>
+            I turn complex ideas into <span>content people actually understand.</span>
           </h1>
           <p className="hero-sub">
             I write about iGaming, Products, and Finance. Most of my work
